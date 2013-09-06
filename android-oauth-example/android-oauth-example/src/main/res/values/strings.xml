@@ -3,6 +3,6 @@
 
     <string name="app_name">android-oauth-example</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Hello world!</string><string name="not_logged_in">Please Click the log in button</string>
 
 </resources>
