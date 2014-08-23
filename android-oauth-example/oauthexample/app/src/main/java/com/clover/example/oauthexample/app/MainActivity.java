@@ -1,18 +1,18 @@
 package com.clover.example.oauthexample.app;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.widget.Button;
-import android.content.Intent;
-import android.widget.Toast;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
     public static final int OAUTH_REQUEST_CODE = 0;
 
-    public static final String ACCESS_TOKEN_KEY = "access_token";
+    public static final String AUTH_CODE = "auth_code";
     public static final String MERCHANT_ID_KEY = "merchant_id";
     public static final String EMPLOYEE_ID_KEY = "employee_id";
 
@@ -37,7 +37,7 @@ public class MainActivity extends ActionBarActivity {
         if(requestCode == OAUTH_REQUEST_CODE && resultCode == RESULT_OK && data != null) {
 
             // Access data from the completed intent
-            String token = data.getStringExtra(ACCESS_TOKEN_KEY);
+            String token = data.getStringExtra(AUTH_CODE);
             String merchantId = data.getStringExtra(MERCHANT_ID_KEY);
             String employeeId = data.getStringExtra(EMPLOYEE_ID_KEY);
             Toast.makeText(MainActivity.this, token, Toast.LENGTH_LONG).show();
