@@ -46,7 +46,7 @@ public class MainActivity extends ActionBarActivity {
             btn.setVisibility(View.GONE);
 
             TextView txtView = (TextView)findViewById(R.id.textView);
-            txtView.setText("Access Token = " + token + "\nMerchant Id = " + merchantId +"\nEmployee Id = " + employeeId);
+            txtView.setText("Auth Token = " + token + "\nMerchant Id = " + merchantId +"\nEmployee Id = " + employeeId);
         }
         else {
             Toast.makeText(this, "Something went wrong!", Toast.LENGTH_SHORT).show();
